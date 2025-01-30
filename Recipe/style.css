@@ -1,0 +1,387 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+.upnav {
+  background-color: #ffffff;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  height: 80px;
+  top: 0;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  font-size: 20px;
+  text-wrap: nowrap;
+}
+.navmenu {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+}
+.navmenu a {
+  display: block;
+  padding: 7px 20px;
+  margin: 10px 7px;
+  color: black;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: #2ecc71;
+    transform: translateY(-2px);
+    color: white;
+  }
+}
+#la {
+  display: none;
+  font-size: 40px;
+}
+.medi input {
+  display: none;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo span {
+  color: black;
+}
+.logo img {
+  width: 70px;
+  border-radius: 25px;
+  margin: 5px 20px;
+}
+.login a {
+  padding: 7px;
+  border-radius: 25px;
+}
+.login .signin {
+  padding: 10px 25px;
+  transition: all 0.3s ease;
+  border: 1px solid rgb(4, 189, 4);
+  color: rgb(4, 189, 4);
+
+  &:hover {
+    background-color: #2ecc71;
+    color: white;
+  }
+}
+.signin {
+  padding-left: 50px !important;
+}
+.login .signup {
+  position: relative;
+  left: 50px;
+  background-color: #2ecc71;
+  border: 1px solid rgb(4, 189, 4);
+  color: rgb(255, 255, 255);
+  padding: 10px 25px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+  }
+}
+@media screen and (max-width: 1290px) {
+  .navmenu {
+    display: none;
+  }
+
+  #la {
+    display: inline;
+  }
+  #ch:checked ~ .navmenu {
+    position: absolute !important;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    top: 100px;
+    left: 0;
+    width: 100%;
+  }
+  .navmenu a {
+    border-radius: 10px;
+  }
+}
+.secmainbody {
+  margin-top: 150px;
+}
+.mainbody {
+  width: 70%;
+  margin: auto;
+}
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.slide-content p {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.slide-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.shop-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #2ecc71;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+  background-color: #27ae60;
+  transform: translateY(-2px);
+}
+.button-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.learn-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.learn-btn:hover {
+  background-color: white;
+  color: #2ecc71;
+  transform: translateY(-2px);
+}
+.catdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.catdivli a {
+  padding: 10px 20px;
+  background-color: rgb(4, 189, 4);
+  border-radius: 25px;
+  text-wrap: nowrap;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  &:hover {
+    background-color: rgb(255, 115, 0);
+  }
+}
+
+.catimg {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.catimg div {
+  background-color: rgb(255, 255, 255);
+  width: 250px;
+  margin-top: 30px;
+  box-shadow: 5px 5px 10px black;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.catimg div img {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+
+.catimg h1 {
+  padding: 5px 20px;
+}
+
+.catimg p {
+  padding: 5px 20px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  margin-top: 100px;
+}
+
+.about p {
+  font-size: 20px;
+}
+
+.about a {
+  padding: 20px;
+  background-color: rgb(4, 189, 4);
+  border-radius: 25px;
+  font-size: 20px;
+  display: block;
+  text-wrap: nowrap;
+  width: 200px;
+  text-wrap: nowrap;
+  margin-top: 40px;
+  color: rgb(255, 255, 255);
+}
+
+.abouthea {
+  color: rgb(4, 189, 4);
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.customers {
+  font-size: 25px;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 50px;
+}
+
+.customers div {
+  background-color: rgb(255, 255, 255);
+  padding: 40px;
+  border-radius: 15px;
+  border-bottom: 7px solid rgb(4, 189, 4);
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.customers img {
+  width: 70px;
+  border-radius: 50px;
+  margin-top: 50px;
+}
+
+.custohea {
+  margin-top: 100px;
+  font-size: 50px;
+  color: rgb(4, 189, 4);
+}
+
+.paranam {
+  display: inline;
+  margin: 50px;
+  vertical-align: super;
+}
+
+.prospan {
+  color: rgb(4, 189, 4);
+}
+
+.prodhea {
+  margin-top: 50px;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 1500px) {
+  .catimg {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .catimg {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.mainfoot {
+  display: grid;
+  margin-top: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 70px;
+  padding: 70px 50px;
+  background-color: #f8f9fa;
+}
+
+.footdiv a {
+  display: block;
+  margin: 30px 0;
+  color: black;
+  font-size: 18px;
+  &:hover {
+    color: rgb(34, 206, 0);
+    text-decoration: underline;
+  }
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  background-image: url(./Reciimg/download\ \(12\).jpeg);
+  background-size: cover;
+  background-position: bottom;
+  height: 500px;
+  overflow: hidden;
+  margin-top: 90px;
+}
+
+
+
+.catimg > div {
+  height: 400px;
+}
+
+.personalpa {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 30px;
+}
+.catimg div a {
+  background-color: rgb(4, 189, 4);
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: auto;
+  display: none;
+  width: 130px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.catimg div:hover a {
+  display: block;
+}
+.catimg div a:hover {
+  background-color: rgb(0, 0, 0);
+}
+.social a {
+  margin: 10px;
+  font-size: 25px;
+  color: black;
+}

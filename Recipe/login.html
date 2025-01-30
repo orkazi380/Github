@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgb(255, 255, 255);
+    }
+
+    .main {
+      background: url("./Reciimg/9f972b06-32bb-464c-b940-34b12839e836.jpeg") no-repeat fixed;
+      background-size: 100% 100%;
+      width: 100%;
+      height: 100vb;
+    }
+
+    .div {
+      backdrop-filter: blur(3px);
+      padding: 30px;
+      border: 2px solid red;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 25px;
+      height: 400px;
+      z-index: 1;
+      width: 400px;
+      /* backdrop-filter: blur(15px); */
+    }
+
+    .di input {
+      padding: 10px;
+      position: relative;
+      top: 30px;
+      outline: none;
+      background: transparent;
+      border: none;
+      font-size: 18px;
+      border-bottom: 2px solid;
+    }
+
+    .di label {
+      text-align: left;
+      position: relative;
+      top: -19px;
+      font-size: 20px;
+      left: 5px;
+      transition: top 1s;
+    }
+
+    .di input:hover~label,
+    .di input:focus~label,
+    .di input:valid~label {
+      top: -50px;
+    }
+
+    .form {
+      text-align: center;
+    }
+
+    .btn {
+      margin: 30px 0;
+      padding: 10px;
+      position: relative;
+      background-color: aqua;
+      border: none;
+      width: 200px;
+      color: rgb(0, 0, 0);
+      font-size: 20px;
+      z-index: 1;
+      border-radius: 25px;
+    }
+    .btn::before{
+      content: '';
+      position: absolute;
+      top: 50%;   
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 110%;
+      height: 110%;
+      background: rgb(255, 0, 0);
+      z-index: -1;
+      border-radius: 25px;
+      transition: 0.5s;
+
+    }
+    .di {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+    }
+
+    .di p {
+      margin-top: 20px;
+    }
+
+    .form h1 {
+      color: white;
+      text-shadow: 0 0 20px rgb(0, 255, 255, 1), 0 0 20px rgb(0, 255, 255, 1), 0 0 20px rgb(0, 255, 255, 1), 0 0 20px rgb(0, 255, 255, 1);
+    }
+
+    .di i {
+      position: absolute;
+      right: 0;
+      top: 40px;
+    }
+    #acc,#for {
+        color: rgb(0, 0, 0);
+      }
+    @media screen and (max-width: 680px) {
+
+      .main {
+        background: rgb(129, 128, 128);
+        background-size: cover;
+      }
+
+      #acc,
+      #for {
+        color: rgb(0, 0, 0);
+      }
+
+      .div {
+        background-color: transparent;
+        padding: 30px;
+        border: 2px solid red;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 25px;
+        height: 400px;
+        width: 250px;
+        backdrop-filter: blur(15px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="div">
+      <form action="" class="form">
+        <h1>Login Form</h1>
+        <div class="di">
+          <input type="text" id="name" required autocomplete="off" /><br />
+          <label for="name">Enter Your Name</label>
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="di">
+          <input type="password" id="pass" required autocomplete="off" /><br />
+          <label for="pass">Enter Your password</label>
+          <i class="fa-solid fa-lock"></i>
+          <p><a href="#" id="for">Forget Password</a></p>
+        </div>
+        <button class="btn">Submit</button>
+        <p>You have no Account <a href="./Sign.html" id="acc">Click here</a></p>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
