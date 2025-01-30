@@ -22,6 +22,7 @@
   position: relative;
   font-size: 20px;
   text-wrap: nowrap;
+  text-wrap: nowrap;
 }
 .navmenu {
   display: flex;
